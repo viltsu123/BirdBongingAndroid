@@ -148,7 +148,7 @@ public class PointsFragment extends Fragment {
 
             Intent i = new Intent(Intent.ACTION_SEND);
             i.setType("message/rfc822");
-            i.putExtra(Intent.EXTRA_EMAIL  , new String[]{"vpalmgren@gmail.com"});
+            i.putExtra(Intent.EXTRA_EMAIL  , new String[]{"your@email.here"});
             i.putExtra(Intent.EXTRA_SUBJECT, "Congrats! You reached " + totalPoints + " in BirdBonger!");
             i.putExtra(Intent.EXTRA_TEXT   , "Here is your congratulation message from the CEO of BirdBonging ltd:" + br
                     + br +"Well done indeed! I thought no one would reach the level you have and look how fast " +
@@ -164,7 +164,7 @@ public class PointsFragment extends Fragment {
 
             Intent i = new Intent(Intent.ACTION_SEND);
             i.setType("message/rfc822");
-            i.putExtra(Intent.EXTRA_EMAIL  , new String[]{"vpalmgren@gmail.com"});
+            i.putExtra(Intent.EXTRA_EMAIL  , new String[]{"your@email.here"});
             i.putExtra(Intent.EXTRA_SUBJECT, "Congrats! You reached " + totalPoints + " in BirdBonger!");
             i.putExtra(Intent.EXTRA_TEXT   , "Holy smokes! You did the unthinkable and conquered the game! CEO Willie Palmberg has an urgent message for you: " + br +
             br+"Oh my god! You did it! The treasure is now yours: Five weeks at the Sandals resort in Jamaica, all inclusive! " + br
