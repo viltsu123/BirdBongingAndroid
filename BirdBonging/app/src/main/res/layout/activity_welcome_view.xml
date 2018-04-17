@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.viltsu.birdbonging.WelcomeView"
+    android:background="@drawable/welcomeforest">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteY="8dp"
+        tools:layout_editor_absoluteX="8dp"
+        android:id="@+id/sceneWelcome_root">
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/sceneA_Welcome">
+
+            <ImageView
+                android:layout_width="400dp"
+                android:layout_height="100dp"
+                android:background="@drawable/woodplanksmall"
+                android:layout_centerInParent="true"
+                android:layout_alignParentTop="true"
+                android:padding="5dp"
+                android:id="@+id/tere"/>
+
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/welcomeheading"
+            android:fontFamily="@font/jotione"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="25dp"
+            android:textSize="20dp"
+            android:id="@+id/teksti"
+            />
+
+        <Button
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:background="@drawable/woodplanksmall"
+            android:layout_centerInParent="true"
+            android:layout_below="@id/tere"
+            android:layout_marginTop="100dp"
+            android:text="@string/startbonging"
+            android:fontFamily="@font/jotione"
+            android:id="@+id/aloitus"
+            android:onClick="goBonging"
+            />
+
+        <Button
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:background="@drawable/woodplanksmall"
+            android:layout_centerInParent="true"
+            android:layout_below="@id/aloitus"
+            android:layout_marginTop="10dp"
+            android:text="@string/bongedbirds"
+            android:fontFamily="@font/jotione"
+            android:onClick="seeStats"
+            />
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

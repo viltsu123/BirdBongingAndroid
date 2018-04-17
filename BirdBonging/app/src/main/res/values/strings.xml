@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Bird Bonging</string>
+    <string name="welcomeheading">Welcome to Bird Bonging</string>
+    <string name="startbonging">Start Bonging</string>
+    <string name="bongedbirds">Bonged birds</string>
+    <string name="scoreboard">You have Bonged Well!</string>
+    <string name="quit">Quit</string>
+    <string name="stats_center">Stats Center</string>
+    <string name="bonging_birds">Bonging in Process...Ssshhhh</string>
+    <string name="pointsdefault">This is the points view</string>
+    <string name="infoview">This is the bird info view</string>
+    <string name="actions">actions</string>
+
+    <!-- Bird info texts coming here-->
+    <string name="penguin_info">The elusive Penguino. This slippery bird lives behind trees, avoiding the public eye when ever possible.
+        It loves eating fish, pine cones and leaves.
+        If you are lucky enough to catch one be sure to keep him/her in your list of Bonged Birds!</string>
+    <string name="duck_info">The common Yellow Duck. This little pricker flew in from Angry Birds and is quite common indeed.
+        Not hard to catch but you still have to get one to say "Yes, I have one!". Likes to stay out on the field and can be fast in its movements.
+    Eats worms, tells dirty jokes and is very amicable company.</string>
+    <string name="mallord_info">The Wood Pecker of the bunch. This fellow is somewhat rare to be seen.
+    He stays up high in the trees and pecks away on the fresh pine trees. Likes to make holes in everything. Horrible movie company.
+    Eats anything it can find, drinks heavily and plays backgammon for some reason. Has a black belt in Sudoku. Not to be taken lightly.</string>
+</resources>

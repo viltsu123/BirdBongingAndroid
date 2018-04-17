@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/custom_list_view"
+    android:background="#80000000"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearteksti"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:paddingTop="50dp"
+        android:paddingRight="50dp"
+        android:paddingLeft="50dp"
+        android:paddingBottom="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/birdtype"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:paddingRight="16dp"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            tools:text="hei"
+            android:layout_marginTop="50dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/message"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:paddingLeft="16dp"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            tools:text="hei"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linearteksti"
+        android:id="@+id/vicpic"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/statsimage"
+            tools:background="@drawable/penguin"
+            android:layout_centerInParent="true"
+            android:paddingBottom="16dp"
+            android:paddingTop="50dp"
+            android:layout_marginTop="50dp"
+            />
+
+    </RelativeLayout>
+
+    <Button
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="@string/actions"
+        android:layout_marginTop="50dp"
+        android:id="@+id/deletebtn"
+        android:layout_below="@id/vicpic"
+        android:layout_marginBottom="50dp"
+        android:layout_centerInParent="true"
+        />
+
+
+</RelativeLayout>

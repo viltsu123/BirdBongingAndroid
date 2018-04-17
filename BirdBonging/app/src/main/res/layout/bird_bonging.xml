@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/playfield">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/masterLayout">
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/duck"
+            android:id="@+id/pecker"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_margin="10dp" />
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/mallord"
+            android:id="@+id/prikki"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_margin="10dp"/>
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/penguin"
+            android:id="@+id/kukko"
+            android:layout_alignParentLeft="true"
+            android:layout_margin="10dp"/>
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/homeicon"
+            android:onClick="goHome"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/kotinappain"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/pointsview"
+            tools:text="pts:0"
+            android:textColor="@color/white"
+            android:paddingLeft="10dp"
+            android:layout_toRightOf="@id/kotinappain"/>
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

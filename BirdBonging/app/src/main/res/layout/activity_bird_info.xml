@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_weight="3"
+    android:background="@android:color/white"
+    tools:context="com.example.viltsu.birdbonging.BirdInfoActivity"
+    android:id="@+id/birdinfo_view">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/penguin"
+            android:id="@+id/penguin_info_pic"
+            android:padding="5dp"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/penguin_info_pic"
+            android:src="@drawable/playarrow"
+            android:padding="5dp"
+            android:id="@+id/penguinsound"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/penguin_info"
+            android:layout_toRightOf="@id/penguin_info_pic"
+            android:padding="10dp"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/duck"
+            android:id="@+id/duck_info_pic"
+            android:padding="5dp"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/duck_info_pic"
+            android:src="@drawable/playarrow"
+            android:padding="5dp"
+            android:id="@+id/ducksound"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/duck_info"
+            android:layout_toRightOf="@id/duck_info_pic"
+            android:padding="10dp"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/mallord"
+            android:id="@+id/mallord_info_pic"
+            android:padding="5dp"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/mallord_info_pic"
+            android:src="@drawable/playarrow"
+            android:padding="5dp"
+            android:id="@+id/mallordsound"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/mallord_info"
+            android:layout_toRightOf="@id/mallord_info_pic"
+            android:padding="10dp"/>
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,83 @@
+package com.example.viltsu.birdbonging;
+
+import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
+import android.graphics.drawable.Drawable;
+import android.os.Bundle;
+import android.util.TypedValue;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+
+import com.example.viltsu.birdbonging.data.BirdContract;
+import com.example.viltsu.birdbonging.data.BirdHelper;
+
+import java.util.ArrayList;
+
+/**
+ * Created by ville-pekkapalmgren on 19/01/18.
+ * Toimii, Asettelu kunnossa, kanta toimii on Create ja Read optiot käytössä.
+ */
+
+public class StatsCenter extends WelcomeView {
+
+    private BirdHelper birdie;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState){
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.stat_center);
+
+        //list for scores:
+        ArrayList<Bird> scoreList = new ArrayList<Bird>();
+
+        birdie = new BirdHelper(this);
+
+        SQLiteDatabase db = birdie.getReadableDatabase();
+        String [] projection = {
+                BirdContract.BirdEntry.COLUMN_BIRD_BREED,
+                BirdContract.BirdEntry.COLUMN_BIRD_BONGED,
+                BirdContract.BirdEntry.COLUMN_BIRD_PIC,
+                BirdContract.BirdEntry._ID
+        };
+        String selection = BirdContract.BirdEntry._ID + "<=3";
+
+        Cursor c = db.query(BirdContract.BirdEntry.TABLE_NAME, projection, selection, null, null, null, null);
+        TextView display = (TextView) findViewById(R.id.displayStats);
+
+        try{
+            int birdBreed = c.getColumnIndex(BirdContract.BirdEntry.COLUMN_BIRD_BREED);
+            int birdBonged = c.getColumnIndex(BirdContract.BirdEntry.COLUMN_BIRD_BONGED);
+           int birdPic = c.getColumnIndex(BirdContract.BirdEntry.COLUMN_BIRD_PIC);
+            while(c.moveToNext()){
+                String breed = c.getString(birdBreed);
+                String bonged = c.getString(birdBonged);
+                Drawable pic = getResources().getDrawable(c.getInt(birdPic));
+                display.append(breed + ", " + bonged + "\n");
+
+                ImageView img = new ImageView(this);
+                img.setImageDrawable(pic);
+                int dp = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 50, getResources().getDisplayMetrics());
+                img.setMaxWidth(dp);
+                img.setMaxHeight(dp);
+                LinearLayout rl = (LinearLayout) findViewById(R.id.linearstats);
+                LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(
+                        ViewGroup.LayoutParams. WRAP_CONTENT, dp, 1);
+
+                rl.addView(img, lp);
+
+            }
+        }finally{
+            c.close();
+        }
+    }
+
+    public void goHome(View view){
+        Intent intent = new Intent(this, WelcomeView.class);
+
+        startActivity(intent);
+    }
+}
